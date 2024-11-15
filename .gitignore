@@ -1,0 +1,8 @@
+#Folders and files to be ignored
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+.vs/
+.vsconfig
