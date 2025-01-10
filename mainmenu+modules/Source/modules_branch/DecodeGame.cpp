@@ -1,76 +1,99 @@
 #include "DecodingGame.h"
-#include "Math/UnrealMathUtility.h"
 
 // Constructor
 ADecodingGame::ADecodingGame()
 {
-    // Define messages
-    Messages = { TEXT(""), TEXT("UNREAL ENGINE"), TEXT("DECODING GAME"), TEXT("SECRET CODE"), TEXT("FUN WITH GAMES") };
+    PrimaryActorTick.bCanEverTick = true;
 
-    // Define decoding key (example key)
-    DecodeKey = {
-        {'A', 'C'}, {'B', 'F'}, {'C', 'E'}, {'D', 'H'},
-        {'E', 'K'}, {'F', 'L'}, {'G', 'M'}, {'H', 'P'},
-        {'I', 'Q'}, {'J', 'R'}, {'K', 'S'}, {'L', 'T'},
-        {'M', 'U'}, {'N', 'V'}, {'O', 'W'}, {'P', 'X'},
-        {'Q', 'Y'}, {'R', 'Z'}, {'S', 'A'}, {'T', 'B'}
+    // Example messages
+    Messages = {
+        TEXT("HELLO WORLD"),
+        TEXT("UNREAL ENGINE"),
+        TEXT("C++ IS AWESOME"),
+        TEXT("DECODING GAME"),
+        TEXT("HAVE FUN"),
+        TEXT("GOOD LUCK")
     };
-
-    // Initialize game logic
-    InitializeGame();
 }
 
-// Initialize the game by selecting a random message and encoding it
+// Initializes the game
 void ADecodingGame::InitializeGame()
 {
     // Select a random message
-    int32 RandomIndex = FMath::RandRange(0, Messages.Num() - 1);
-    OriginalMessage = Messages[RandomIndex];
+    OriginalMessage = Messages[FMath::RandRange(0, Messages.Num() - 1)];
+
+    // Generate a simple substitution cipher
+    DecodeKey.clear();
+    for (char Letter = 'A'; Letter <= 'Z'; ++Letter)
+    {
+        char Encoded = 'A' + FMath::RandRange(0, 25);
+        DecodeKey.Add(Letter, Encoded);
+    }
 
     // Encode the message
     EncodedMessage = EncodeMessage(OriginalMessage);
 }
 
-// Encode a message using the DecodeKey
+// Encodes a message using the DecodeKey
 FString ADecodingGame::EncodeMessage(const FString& Message)
 {
-    FString Encoded;
-    for (TCHAR Char : Message)
+    FString Result = "";
+    for (TCHAR Letter : Message)
     {
-        if (DecodeKey.find(Char) != DecodeKey.end())
+        if (DecodeKey.Contains(Letter))
         {
-            Encoded += DecodeKey[Char];
+            Result += DecodeKey[Letter];
         }
         else
         {
-            Encoded += Char; // Leave spaces or unsupported characters as is
+            Result += Letter; // Keep non-alphabet characters
         }
     }
-    return Encoded;
+    return Result;
 }
 
-// Decode a message using the reverse of DecodeKey
+// Decodes a message using the DecodeKey
 FString ADecodingGame::DecodeMessage(const FString& Encoded)
 {
-    FString Decoded;
-    std::unordered_map<char, char> ReverseKey;
-
-    // Create a reverse key
-    for (auto& Pair : DecodeKey)
+    FString Result = "";
+    for (TCHAR Letter : Encoded)
     {
-        ReverseKey[Pair.second] = Pair.first;
-    }
-
-    for (TCHAR Char : Encoded)
-    {
-        if (ReverseKey.find(Char) != ReverseKey.end())
+        // Find the original letter
+        for (const auto& Pair : DecodeKey)
         {
-            Decoded += ReverseKey[Char];
-        }
-        else
-        {
-            Decoded += Char;
+            if (Pair.Value == Letter)
+            {
+                Result += Pair.Key;
+                break;
+            }
         }
     }
-    return Decoded;
+    return Result;
+}
+
+FString ADecodeGame::GetEncodedMessage() const {
+    return EncodedMessage; // Return the encoded message
+}
+
+void ADecodeGame::SubmitAnswer(const FString& PlayerInput) {
+    if (PlayerInput.Equals(OriginalMessage, ESearchCase::IgnoreCase)) {
+        // Correct answer logic
+        UE_LOG(LogTemp, Warning, TEXT("Correct Answer!"));
+    }
+    else {
+        // Incorrect answer logic
+        UE_LOG(LogTemp, Warning, TEXT("Wrong Answer!"));
+    }
+}
+
+FString ADecodeGame::GetDecodeKey() const {
+    FString Key;
+    for (const auto& Pair : DecodeKey) {
+        Key += FString::Printf(TEXT("%c -> %c\n"), Pair.Key, Pair.Value);
+    }
+    return Key;
+}
+
+int32 ADecodeGame::GetRemainingTime() const {
+    return FMath::Clamp(RemainingTime, 0, MaxTime); // Return the remaining time
 }
