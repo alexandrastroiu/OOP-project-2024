@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DecodeGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DecodeGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.h||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DecodeTimer.h||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DecodeTimer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DecodeTimer.cpp",
+              "DocumentMoniker": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.cpp",
+              "RelativeDocumentMoniker": "DecodeTimer.cpp",
+              "ToolTip": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.cpp",
+              "RelativeToolTip": "DecodeTimer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T19:28:58.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DecodeTimer.h",
+              "DocumentMoniker": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.h",
+              "RelativeDocumentMoniker": "DecodeTimer.h",
+              "ToolTip": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeTimer.h",
+              "RelativeToolTip": "DecodeTimer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T19:28:39.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DecodeGame.cpp",
+              "DocumentMoniker": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.cpp",
+              "RelativeDocumentMoniker": "DecodeGame.cpp",
+              "ToolTip": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.cpp",
+              "RelativeToolTip": "DecodeGame.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T19:15:03.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DecodeGame.h",
+              "DocumentMoniker": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.h",
+              "RelativeDocumentMoniker": "DecodeGame.h",
+              "ToolTip": "D:\\facultate\\a2_s1\\POO\\OOP-project-2024\\mainmenu\u002Bmodules\\Source\\modules_branch\\DecodeGame.h",
+              "RelativeToolTip": "DecodeGame.h",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T19:15:15.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
